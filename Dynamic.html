@@ -1,0 +1,19 @@
+<DOCTYPE html>
+<html>
+<head>
+        <title>dynamic website Example</title>
+/head>
+<body>
+    <h2>Dynamic website Example</h2>
+    <lable>Enter your name:</lable>
+    <input type="text id=username">
+    <button onclick="showMeassage()">submit</button>
+    <p id="output"></p>
+    <script>
+        function showMessage() {
+            var name = document.getElementBYID("username").value;
+            document.getElementBYID("output").innerHTML="hello"+name+"!welcome to our dynamic website."
+        }
+    </script>
+</body>
+</html>
