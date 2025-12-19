@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dynamic website example</title>
+</head>
+<body>
+     <h2>dynamic website example</h2>
+
+     <label>enter your name:</label>
+     <input type="text" id="username">
+     <button onclick="showmessage()">submit</button>
+
+     <p id="output"></p>
+
+     <script>
+        function  showmessage() {
+            var name = document.getElementById("username").value;
+            document.getElementById("output").innerHTML = 
+            "hello " + name + "! welcome to our dynamic website. ";
+        }
+     </script>
+</body>
+</html>
