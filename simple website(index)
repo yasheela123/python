@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    </header>
+    <h1>my To-Do App</h1>
+    <nav>p
+        <ul>
+            <li><a herf="#" onclick="showHome()">Home</a></li>
+            <li><a herf="#" onclick="showHome()">About</a></li>
+            <li><a herf="#" onclick="showHome()">services</a></li>
+            <li><a herf="#" onclick="showHome()">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+        <section id="content">
+            <h2>Welcome!</h2>
+            <p>This is the Home section. click the menu to explain.</p>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        p@ 2025 My To-Do App</p>
+    </footer>
+    <script scr="script.js"></script>
+    </body>
+    </html>
