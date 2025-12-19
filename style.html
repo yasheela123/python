@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f6e7dc 0%, #f2d7c9 100%);
+    min-height: 100vh;
+    padding: 24px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 620px;
+    margin: auto;
+    background: #fffaf6;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(139, 0, 0, 0.15);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #8b1e1e;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #7a5c4c;
+    font-size: 16px;
+}
+
+/* Input */
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 2px solid #e6cfc2;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
+}
+
+#taskInput:focus {
+    border-color: #c0392b;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: #c0392b;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #a93226;
+    transform: translateY(-2px);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.filter-btn {
+    padding: 8px 22px;
+    border-radius: 20px;
+    border: 2px solid #e6cfc2;
+    background: #fff;
+    color: #7a5c4c;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #c0392b;
+    color: white;
+    border-color: #c0392b;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #7a5c4c;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: #c0392b;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-text:hover {
+    text-decoration: underline;
+}
+
+/* Tasks */
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: #fdf1ea;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.25s ease;
+}
+
+.task-item:hover {
+    background: #f9e2d7;
+}
+
+.task-item.completed {
+    opacity: 0.65;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #9e7c6c;
+}
+
+/* Checkbox */
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #c0392b;
+    border-radius: 50%;
+    margin-right: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.task-item.completed .checkbox {
+    background: #c0392b;
+}
+
+.task-item.completed .checkbox::after {
+    content: '✓';
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.task-text {
+    flex: 1;
+    font-size: 16px;
+    color: #4b2e2e;
+}
+
+/* Actions */
+.task-actions {
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.task-item:hover .task-actions {
+    opacity: 1;
+}
+
+.btn-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 18px;
+}
+
+.btn-edit {
+    color: #8b1e1e;
+}
+
+.btn-delete {
+    color: #c0392b;
+}
+
+/* Edit */
+.edit-input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #c0392b;
+    outline: none;
+}
+
+/* Empty */
+.empty-state {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state.show {
+    display: block;
+}
+
+.empty-state p {
+    font-size: 18px;
+    color: #9e7c6c;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .container {
+        padding: 24px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
